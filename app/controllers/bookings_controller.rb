@@ -10,10 +10,6 @@ class BookingsController < ApplicationController
     @hotel = Hotel.find(@booking.hotel_id)
 
     if @booking.invalid?
-      # flash[:alert] = "空欄があります。"
-      # @booking.errors.full_messages.each do |message|
-      #   @message = message
-      # end
       render template: "hotels/show"
     else
       @stay_days = (@booking.end_date.to_date - @booking.start_date.to_date).to_i
