@@ -1,0 +1,38 @@
+<div class="user-info">
+  <ul class="title">
+    <li class="title-profile">プロフィール</li>
+
+    <div>
+      <li class="link-account">
+        <i class="fa fa-caret-right"></i>
+        <%= link_to "アカウント情報の変更", edit_user_registration_path %>
+      </li>
+    </div>
+  </ul>
+
+  <%= render "shared/error", obj: @user %>
+  <div class="profile-form">
+    <% if @user.image.attached? %>
+      <%= image_tag @user.image, size: '100x100', class: "avatar"%>
+    <% end %>
+    <%= form_with(model: @user, url: profile_renewal_path, data: { turbo: false }) do |f| %>
+
+      <div class="profile">
+        <%= f.label :image, "アイコン画像"%>
+        <%= f.file_field :image %>
+      </div>
+      <div class="profile">
+        <%= f.label :name, "名前"%>
+        <%= f.text_field :name %>
+      </div>
+      <div class="profile-introduction">
+        <%= f.label :introduction, "自己紹介"%>
+        <%= f.text_area :introduction %>
+      </div>
+
+      <div class="profile-update-button">
+        <input type="button" onclick="submit();" value="更新" />
+      </div>
+    <% end %>
+  </div>
+</div>

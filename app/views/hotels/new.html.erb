@@ -1,0 +1,31 @@
+<div class="hotel-registration">
+  <h2>ルーム情報の登録</h2>
+  <p>登録したいルームの情報を入力してください</p>
+
+  <%= render "shared/error", obj: @hotel %>
+
+  <%= form_with model:@hotel do |f| %>
+    <%= f.label :room_name, "ルーム名" %>
+    <%= f.text_field :room_name, placeholder: "ルーム名を入力" %>
+    <br>
+    <div class="room-introduction">
+      <%= f.label :room_introduction, "ルーム紹介" %>
+      <%= f.text_area :room_introduction, placeholder: "ルームの説明を入力" %>
+    </div>
+    <br>
+    <%= f.label :price, "利用料金" %>
+    <%= f.text_field :price, placeholder: "一日あたりの料金を入力" %>
+    <br>
+    <%= f.label :address, "住所" %>
+    <%= f.text_field :address, placeholder: "ルームの住所を入力" %>
+    <br>
+      <%= f.label :image, "ルーム画像"%>
+      <%= f.file_field :image %>
+    <%# 登録したユーザーとの紐付け %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <br>
+    <div class="registration-button">
+      <input type="button" onclick="submit();" value="登録" />
+    </div>
+  <% end %>
+</div>

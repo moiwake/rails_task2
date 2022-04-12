@@ -1,0 +1,15 @@
+<div class="search-container">
+  <h2>検索結果 <%= @count %>件</h2>
+  <div class="search-results">
+    <% @results.each do |hotel| %>
+      <div class="content">
+        <%= link_to hotel_path(hotel) do %>
+          <%= image_tag hotel.image %>
+          <p class="room-name"><%= hotel.room_name %></p>
+          <p><%= hotel.address %></p>
+          <p>1泊1人 <%= hotel.price %> 円</p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
