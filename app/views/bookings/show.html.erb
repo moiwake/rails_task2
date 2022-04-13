@@ -1,0 +1,26 @@
+<div class="booking-complete">
+  <h2>予約内容</h2>
+
+  <div class="booking-detail">
+    <div class="row">
+      <label for="room">予約ルーム</label>
+      <div class="content"><%= link_to @hotel.room_name, hotel_path(@hotel) %></div>
+    </div>
+    <div class="row">
+      <label for="start_date">開始日</label>
+      <div class="content"><%= @booking.start_date.to_s(:datetime_jp) %></div>
+    </div>
+    <div class="row">
+      <label for="end_date">終了日</label>
+      <div class="content"><%= @booking.end_date.to_s(:datetime_jp) %></div>
+    </div>
+    <div class="row">
+      <label for="person-num">人数</label>
+      <div class="content"><%= @booking.person_num %> 名</div>
+    </div>
+    <div class="row">
+      <label for="sum_price">ご利用金額合計</label>
+      <div class="content"><%= @sum_price %> 円</div>
+    </div>
+  </div>
+</div>

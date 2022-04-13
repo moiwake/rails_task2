@@ -1,0 +1,135 @@
+.booked-rooms, .booking-complete{
+  border-radius :8px;
+  box-shadow :0px 0px 5px silver;
+  margin: 20px;
+  padding: 20px;
+}
+
+.booked-rooms h2, .booking-complete h2{
+  margin: 0;
+  color: #5a81ce;
+}
+
+
+/* 予約ルーム一覧 */
+
+.booked-rooms table{
+  margin-top: 20px;
+}
+
+.booked-rooms th{
+  font-size: 16px;
+  font-weight: 100;
+  color: rgb(85, 74, 59);
+  padding-bottom: 10px;
+  border-bottom: 2px dashed rgba(85, 74, 59, 0.347);
+}
+
+.booked-rooms td{
+  font-weight: lighter;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.booked-rooms .room-name{
+  text-decoration: none;
+  color: rgba(40, 130, 115, 0.997);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.booked-room-introduction{
+  width: max-content;
+  text-align: left !important;
+  border-bottom: 1px solid lightgrey;
+}
+
+.booked-rooms img{
+  max-width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+/* 予約確認画面 */
+
+.booking-confirm{
+  width: max-content;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.booking-confirm h2{
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #5a81ce;
+}
+
+.booking-confirm table{
+  font-size: 16px;
+  border-spacing: 10px;
+}
+
+.booking-confirm th{
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #c7d3eb;
+}
+
+.booking-confirm td{
+  padding-left: 20px;
+}
+
+.booking-confirm input[type="button"]{
+  border-radius: 8px;
+  padding: 6px;
+  margin-top: 30px;
+  box-sizing: border-box;
+  border: 3px solid #5a81ce;
+  color: #5a81ce;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.booking-confirm a{
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: rgba(12, 60, 94, 0.829);
+}
+
+
+/* 予約完了画面 */
+
+.booking-detail{
+  margin-top: 30px;
+}
+
+.booking-detail .row{
+  display: flex;
+  align-items: center;
+}
+
+.booking-detail label{
+  font-size: 16px;
+  font-weight: bold;
+  width: 200px;
+  padding: 10px;
+}
+
+.booking-detail .content{
+  font-size: 16px;
+}
+
+.booking-detail a{
+  text-decoration: none;
+  color: #5a81ce;
+}

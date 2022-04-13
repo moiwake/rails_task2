@@ -1,0 +1,41 @@
+<div class="top">
+  <div class="top-main">
+    <h2>Potepan Shareで<br>まだ体験したことのない旅をしよう</h2>
+    <div class="top-search">
+      <%= search_form_for @q, url: search_pages_path do |f| %>
+        <%= f.label :address_cont, "エリア" %><br>
+        <%= f.search_field :address_cont, placeholder: " 東京" %>
+        <br>
+        <%= f.submit "search", class: "search-form-button" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<div class="area-panel">
+  <div class="area-panel-item">
+    <span>東京</span>
+    <%= link_to controller: "pages", action: "search", q: { address_cont: "東京"} do %>
+      <%= image_tag "https://cdn.pixabay.com/photo/2017/04/01/10/59/tokyo-2193354_960_720.jpg", alt: "search_tokyo", class: "area-panel-image" %>
+    <% end %>
+  </div>
+  <div class="area-panel-item">
+  <span>京都</span>
+    <%= link_to controller: "pages", action: "search", q: { address_cont: "京都"} do %>
+      <%= image_tag "https://images.unsplash.com/photo-1573047330192-4e6bb1594325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80", alt: "search_kyoto", class: "area-panel-image" %>
+    <% end %>
+  </div>
+  <div class="area-panel-item">
+  <span>北海道</span>
+    <%= link_to controller: "pages", action: "search", q: { address_cont: "北海道"} do %>
+      <%= image_tag "https://images.unsplash.com/photo-1598176433730-2aca0907a717?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80", alt: "search_hokkaido", class: "area-panel-image" %>
+    <% end %>
+  </div>
+  <div class="area-panel-item">
+  <span>沖縄</span>
+    <%= link_to controller: "pages", action: "search", q: { address_cont: "沖縄"} do %>
+    <%= image_tag "https://images.unsplash.com/photo-1610971250019-f677bc1300be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80", alt: "search_okinawa", class: "area-panel-image" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="registrated-rooms">
+  <h2>登録ルームの一覧</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ルームイメージ</th>
+        <th>ルーム名</th>
+        <th>ルームの紹介</th>
+        <th>料金</th>
+        <th>登録日</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @hotels.each do |hotel| %>
+      <tr>
+        <td><%= link_to image_tag(hotel.image, size: '200x120'), hotel_path(hotel) %></td>
+        <td><%= link_to hotel.room_name, hotel_path(hotel), class: "room-name" %></td>
+        <td class="registrated-room-introduction"><%= hotel.room_introduction %></td>
+        <td><%= hotel.price %> 円</td>
+        <td><%= hotel.created_at.to_s(:datetime_jp) %></td>
+        <%# <%= button_to "削除", hotel_path(hotel), method: :delete %>
+        <%# <%= hotel.user_id %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

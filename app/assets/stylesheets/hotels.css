@@ -1,0 +1,200 @@
+.hotel-registration, .registrated-rooms, .room-details{
+  border-radius :8px;
+  box-shadow :0px 0px 5px silver;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+/* ルームの登録 */
+.hotel-registration h2, .registrated-rooms h2{
+  margin: 0;
+  color: rgb(216 162 55);
+}
+
+.hotel-registration p{
+  margin: 0;
+  padding: 25px 0;
+  font-size: 17px;
+  color: rgb(85, 74, 59);
+}
+
+.hotel-registration label{
+  display: inline-block;
+  width: 150px;
+  font-size: 15px;
+}
+
+.hotel-registration label::after{
+  content: "必須";
+  background-color: rgba(255, 99, 71, 0.743);
+  color: white;
+  font-size: 12px;
+  padding: 2px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.hotel-registration input[type="text"], .hotel-registration textarea{
+  width: 75%;
+  height: 30px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-color: darkgray;
+  border-radius: 5px;
+}
+
+.hotel-registration textarea{
+  padding-top: 5px;
+  font-family: inherit;
+  margin-left: 5px;
+  height: 100px;
+}
+
+.room-introduction{
+  display: flex;
+}
+
+.registration-button{
+ display: flex;
+ justify-content: flex-end
+}
+
+.hotel-registration input[type="button"]{
+  width: 80px;
+  height: 40px;
+  margin-top: 25px;
+  background-color: rgba(12, 60, 94, 0.829);
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+}
+
+
+/* 登録ルームの一覧 */
+.registrated-rooms table{
+  margin-top: 20px;
+}
+
+.registrated-rooms th{
+  font-size: 16px;
+  font-weight: 100;
+  color: rgb(85, 74, 59);
+  padding-bottom: 10px;
+  border-bottom: 2px dashed rgba(85, 74, 59, 0.347);
+}
+
+.registrated-rooms td{
+  font-weight: lighter;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.registrated-rooms .room-name{
+  text-decoration: none;
+  color: rgba(40, 130, 115, 0.997);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.registrated-rooms img{
+  max-width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+
+/* ルーム詳細 */
+.room-details{
+  display: flex;
+}
+
+.details{
+  max-width: 70%;
+}
+
+.details img{
+  max-width: 100%;
+}
+
+.main-detail{
+  display: flex;
+  border-bottom: 2px dashed rgba(85, 74, 59, 0.347);
+  margin-top: 20px;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+.main-detail h2{
+  color: rgba(40, 130, 115, 0.997);
+  margin: 0 30px 0 0;
+  letter-spacing: 1px;
+}
+
+.main-detail p{
+  margin-left: 5px;
+  margin-right: 30px;
+  font-size: 14px;
+}
+
+.detail-introduction{
+  font-size: 14px;
+}
+
+
+/* 予約フォーム */
+.booking-form{
+  border-radius: 10px;
+  background-color: rgba(240, 248, 255, 0.577);
+  padding: 30px;
+  margin-left: 50px;
+}
+
+.booking-form h2{
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+
+.booking-form label{
+  width: 150px;
+  font-size: 15px;
+  display: inline-block;
+  margin-bottom: 7px;
+}
+
+.booking-form input[type="date"], .booking-form input[type="number"]{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 17px;
+  padding-left: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-color: darkgray;
+  border-radius: 5px;
+}
+
+.booking-button{
+  display: flex;
+  justify-content: flex-end
+ }
+
+.booking-form input[type="button"]{
+  width: 80px;
+  height: 40px;
+  margin-top: 25px;
+  background-color: rgba(12, 60, 94, 0.829);
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+}

@@ -1,0 +1,83 @@
+/* 新規アカウント作成・ログイン */
+
+.login, .sign-up, .account-update{
+  width: max-content;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.login h2, .sign-up h2, .account-update h2{
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: cadetblue;
+}
+
+.login form, .sign-up form, .account-update form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form, .sign-up-form{
+  display: flex;
+  align-items: center;
+}
+
+.login-form::before, .sign-up-form::before{
+  content: "必須";
+  background-color: rgba(255, 99, 71, 0.743);
+  color: white;
+  font-size: 12px;
+  width: 30px;
+  margin-bottom: 10px;
+  margin-right: 8px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.login-form input, .sign-up-form input, .account-update-form input{
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  padding-left: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-color: darkgray;
+  border-radius: 5px;
+}
+
+.login-button input, .sign-up-button input, .account-update-button input{
+  width: 100px;
+  height: 35px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  background-color: rgba(12, 60, 94, 0.829);
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.sign-up-button input{
+  width: 200px;
+}
+
+.account-update-button{
+  margin-bottom: 30px;
+}
+
+.login a, .sign-up a, .account-update a{
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: rgba(12, 60, 94, 0.829);
+}

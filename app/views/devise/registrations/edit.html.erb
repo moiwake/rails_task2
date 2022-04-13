@@ -1,0 +1,39 @@
+<div class="account-update">
+  <h2>アカウント情報の変更</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="account-update-form">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %>
+    </div>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <div class="account-update-form">
+      <i>* 変更する場合のみ入力 *</i><br />
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "変更後パスワード(６文字以上)" %>
+    </div>
+
+    <div class="account-update-form">
+      <i>* 変更する場合のみ入力 *</i><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "変更後パスワード（確認用）" %>
+    </div>
+
+    <div class="account-update-form">
+      <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "現在のパスワード" %>
+    </div>
+
+    <div class="account-update-button">
+        <input type="button" onclick="submit();" value="更新" />
+    </div>
+  <% end %>
+
+  <%# <div class="account-delete">
+    <p>アカウントの削除</p>
+    <%= button_to "削除する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+
+  <%= link_to "プロフィールの編集へ戻る", profile_path(current_user.id) %>
+</div>

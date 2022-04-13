@@ -1,0 +1,36 @@
+<div class="booking-confirm">
+  <h2>予約内容の確認</h2>
+
+  <h3>１泊１人  <%= @hotel.price %>円</h3>
+
+  <div>
+    <table>
+      <tr>
+        <th>開始日</th>
+        <td><%= @booking.start_date.to_s(:datetime_jp) %></td>
+      </tr>
+      <tr>
+        <th>終了日</th>
+        <td><%= @booking.end_date.to_s(:datetime_jp) %></td>
+      </tr>
+      <tr>
+        <th>宿泊日数</th>
+        <td><%= @stay_days %>泊</td>
+      </tr>
+      <tr>
+        <th>人数</th>
+        <td><%= @booking.person_num %>人</td>
+      </tr>
+      <tr>
+        <th>ご利用金額合計</th>
+        <td><%= @sum_price %>円</td>
+      </tr>
+    </table>
+  </div>
+
+  <%= form_with(model: @booking, url: complete_bookings_path, data: { turbo: false }) do |f| %>
+    <input type="button" onclick="submit();" value="予約を確定する" />
+  <% end %>
+
+  <%= link_to "戻る", hotel_path(@hotel.id) %>
+</div>

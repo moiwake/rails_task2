@@ -1,0 +1,100 @@
+.user-info{
+  border-radius :8px;
+  box-shadow :0px 0px 5px silver;
+  margin: 20px;
+  padding: 30px;
+}
+
+.title{
+  list-style: none;
+  color: cadetblue;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.link-account{
+  display: inline;
+}
+
+.link-account a{
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: 100;
+  font-size: 18px;
+  color: rgba(95, 158, 160, 0.708);
+}
+
+.link-account i{
+  color: rgba(95, 158, 160, 0.708);
+}
+
+.profile-form .avatar{
+  border-radius: 50%;
+  margin: 20px 20px;
+}
+
+.profile-form label{
+  display: inline-block;
+  width: 150px;
+  font-size: 15px;
+}
+
+.profile-form label::after{
+  content: "必須";
+  background-color: rgba(255, 99, 71, 0.743);
+  color: white;
+  font-size: 12px;
+  padding: 2px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.profile input[type="text"], .profile input[type="file"], .profile-introduction textarea{
+  width: 75%;
+  height: 35px;
+  margin-bottom: 20px;
+  padding-left: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-color: darkgray;
+  border-radius: 5px;
+}
+
+.profile-form input[type="file"]{
+  padding: 0;
+  border-style: none;
+}
+
+.profile-introduction textarea{
+  padding-top: 5px;
+  font-family: inherit;
+  margin-left: 5px;
+  height: 100px;
+}
+
+.profile-introduction{
+  display: flex;
+}
+
+.profile-update-button{
+  display: flex;
+ justify-content: flex-end
+}
+
+.profile-update-button input[type="button"]{
+  width: 80px;
+  height: 40px;
+  margin-top: 25px;
+  background-color: rgba(12, 60, 94, 0.829);
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+}

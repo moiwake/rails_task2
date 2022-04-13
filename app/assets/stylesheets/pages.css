@@ -1,0 +1,160 @@
+/* トップページメイン */
+
+.top{
+  background-image: url(https://images.unsplash.com/photo-1536633125620-8a3245c11ffa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1589&q=80);
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.top-main{
+  background-color: white;
+  width: 500px;
+  height: 250px;
+  padding: 30px;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: left;
+  object-position: center;
+}
+
+.top-main h2{
+  line-height: 40px;
+  margin-top: 10px;
+  font-size: 30px;
+  color: darkcyan;
+}
+
+
+/* トップページ検索欄 */
+
+.hotel_search{
+  width: 100%;
+}
+
+.hotel_search input[type="search"]{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-left: 8px;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: cadetblue;
+  border-width: 1px;
+}
+
+.hotel_search input[type="submit"]{
+  width: 100%;
+  height: 30px;
+  background-color: cadetblue;
+  border-radius: 5px;
+  border-style: inherit;
+  border-width: 1px;
+  font-size: 15px;
+}
+
+
+/* トップページおすすめのエリア */
+
+.area-panel{
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.area-panel-item{
+  position: relative;
+  width: 23%;
+  min-width: 250px;
+  height: 350px;
+  margin: 30px 0;
+}
+
+/* 大きい画面 */
+@media screen and (min-width:1060px){
+  .area-panel-item{
+    width: 23%;
+    height: 350px;
+  }
+}
+
+/* 小さい画面 */
+@media screen and (max-width:1060px){
+  .area-panel-item{
+    width: 48%;
+    height: 350px;
+  }
+}
+
+.area-panel-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+span{
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+
+
+/* 検索結果 表示画面 */
+
+.search-container{
+  padding: 10px;
+}
+
+.search-container h2{
+  padding: 10px;
+}
+
+.search-results{
+  display: flex;
+  flex-wrap: wrap;
+  /* max-width: 100%; */
+}
+
+.search-results .content{
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  max-width: 50%;
+  height: max-content;
+  border: 1px solid lightgray;
+}
+
+.search-results a{
+  text-decoration: none;
+  color: black;
+}
+
+.search-results img{
+  object-fit: cover;
+  max-width: 100%;
+  height: 200px;
+  /* width: 200px; */
+}
+
+.search-results .room-name{
+  font-size: 17px;
+  font-weight: bold;
+  color: rgba(40, 130, 115, 0.997);
+}
+
