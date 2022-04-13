@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_06_095915) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_13_063239) do
   create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -83,7 +83,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_06_095915) do
     t.string "room_introduction"
     t.integer "price"
     t.string "address"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -99,8 +98,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_06_095915) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
-    t.string "introduction"
     t.bigint "hotel_id"
+    t.string "introduction"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["hotel_id"], name: "index_users_on_hotel_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
